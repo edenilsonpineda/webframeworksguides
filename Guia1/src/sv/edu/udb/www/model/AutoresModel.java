@@ -18,9 +18,9 @@ public class AutoresModel extends Conexion {
 			rs = cs.executeQuery();
 			while (rs.next()) {
 				Autor autor = new Autor();
-				autor.setCodigoAutor(rs.getString("codigo_autor"));
-				autor.setNombreAutor(rs.getString("nombre_autor"));
-				autor.setNacionalidad(rs.getString("nacionalidad"));
+				autor.setCodigoAutor(rs.getString(1));
+				autor.setNombreAutor(rs.getString(2));
+				autor.setNacionalidad(rs.getString(3));
 				lista.add(autor);
 			}
 			this.desconectar();

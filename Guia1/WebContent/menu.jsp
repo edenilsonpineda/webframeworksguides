@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
@@ -5,7 +10,7 @@
           <button type="button" class="navbar-toggle collapsed" 
                   data-toggle="collapse" data-target="#navbar" 
                   aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Desplegar navegación</span>
+            <span class="sr-only">Desplegar navegaciÃ³n</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>

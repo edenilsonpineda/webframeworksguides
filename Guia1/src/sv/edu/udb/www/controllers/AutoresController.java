@@ -108,7 +108,7 @@ public class AutoresController extends HttpServlet {
 	private void listar(HttpServletRequest request, HttpServletResponse response) {
 		try {
 			request.setAttribute("listaAutores", modelo.listarAutores());
-			request.getRequestDispatcher("/autores/listarAutores.jsp").forward(request, response);
+			request.getRequestDispatcher("/autores/listarAutor.jsp").forward(request, response);
 		} catch (SQLException | ServletException | IOException ex) {
 			Logger.getLogger(AutoresController.class.getName()).log(Level.SEVERE, null, ex);
 		}
