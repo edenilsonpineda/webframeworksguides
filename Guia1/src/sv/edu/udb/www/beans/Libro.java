@@ -12,14 +12,14 @@ public class Libro {
 	private String codigoEditorial;
 	private int idGenero;
 
-	public Libro(String nombreLibro, int existencias, double precio, Autor autor, Editorial editorial, Genero genero,
-			String descripcion, String codigoAutor, String codigoEditorial, int idGenero, String codigoLibro) {
+	
+	public Libro() {
 		this.nombreLibro = "";
 		this.existencias = 0;
 		this.precio = 0;
 		this.autor = null;
 		this.editorial = null;
-		this.genero = genero;
+		this.genero = null;
 		this.descripcion = "";
 		this.codigoAutor = "";
 		this.codigoEditorial = "";

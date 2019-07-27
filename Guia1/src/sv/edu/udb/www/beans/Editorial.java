@@ -5,6 +5,13 @@ public class Editorial {
 	private String nombreEditorial;
 	private String contacto;
 
+	
+	public Editorial(){
+		this.codigoEditorial = "";
+		this.nombreEditorial = "";
+		this.contacto = "";
+	}
+	
 	public Editorial(String nombreEditorial) {
 		this.nombreEditorial = nombreEditorial;
 	}

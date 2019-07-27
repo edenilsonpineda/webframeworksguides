@@ -5,14 +5,10 @@ public class Genero {
 	private String nombreGenero;
 	private String descripcion;
 
-	public Genero(String nombreGenero) {
-		this.nombreGenero = nombreGenero;
-	}
-
-	public Genero(int idGenero, String nombreGenero, String descripcion) {
-		this.idGenero = idGenero;
-		this.nombreGenero = nombreGenero;
-		this.descripcion = descripcion;
+	public Genero() {
+		this.idGenero = 0;
+		this.nombreGenero = "";
+		this.descripcion = "";
 	}
 
 	public int getIdGenero() {
