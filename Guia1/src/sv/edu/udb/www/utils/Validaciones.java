@@ -6,7 +6,6 @@ public class Validaciones {
 
     private static int entero;
     private static double decimal;
-    private static String cadena;
 
     public static boolean esEntero(String cadena) {
         try {
