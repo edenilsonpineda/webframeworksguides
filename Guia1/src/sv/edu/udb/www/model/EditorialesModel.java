@@ -118,6 +118,7 @@ public class EditorialesModel extends Conexion {
 			Logger.getLogger(EditorialesModel.class.getName()).log(Level.SEVERE, null, ex);
 			this.desconectar();
 			return 0;
+			
 		}
 	}
 	
