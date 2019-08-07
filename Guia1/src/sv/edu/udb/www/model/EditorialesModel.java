@@ -11,7 +11,7 @@ public class EditorialesModel extends Conexion {
 	
 	public List<Editorial> listaEditoriales() throws SQLException{
 		try {
-			List<Editorial> lista = new ArrayList<>();
+			List<Editorial> lista = new ArrayList<Editorial>();
 			String sql = "SELECT * FROM editoriales ORDER BY nombre_editorial";
 			this.conectar();
 			st = conexion.prepareStatement(sql);

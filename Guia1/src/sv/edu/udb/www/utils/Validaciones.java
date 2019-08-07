@@ -1,6 +1,5 @@
 package sv.edu.udb.www.utils;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.regex.*;
 
 public class Validaciones {
 
@@ -54,13 +53,13 @@ public class Validaciones {
     }
 
     public static boolean esTelefono(String cadena) {
-        Pattern pat = Pattern.compile("[267][0-9]{3}-[0-9]{4}");
+    	Pattern pat = Pattern.compile("[267][0-9]{3}-[0-9]{4}");
         Matcher mat = pat.matcher(cadena);
         return mat.matches();
     }
 
     public static boolean esCodigoEditorial(String cadena) {
-        Pattern pat = Pattern.compile("EDI[0-9]{3}");
+    	Pattern pat = Pattern.compile("EDI[0-9]{3}");
         Matcher mat = pat.matcher(cadena);
         return mat.matches();
     }

@@ -29,13 +29,13 @@ public class AutoresController extends HttpServlet {
 
 	private static final long serialVersionUID = 2947025922373719989L;
 	
-	ArrayList<String> listaErrores = new ArrayList<>();
+	ArrayList<String> listaErrores = new ArrayList<String>();
 	AutoresModel modelo = new AutoresModel();
 
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
-		try (PrintWriter out = response.getWriter()) {
+		try {
 			if (request.getParameter("op") == null) {
 				listar(request, response);
 				return;

@@ -25,7 +25,7 @@
 						</ul>
 					</div>
 				</c:if>
-				<form role="form" action="${contextPath}/autores.do" method="POST">
+				<form action="${contextPath}/autores.do" method="POST">
 					<input type="hidden" name="op" value="insertar">
 					<div class="well well-sm">
 						<strong><span class="glyphicon glyphicon-asterisk"></span>Campos requeridos</strong>
@@ -50,7 +50,7 @@
 					<div class="form-group">
 						<label for="contacto">Nacionalidad del autor:</label>
 						<div class="input-group">
-							<input type="text" class="form-control" id="contacto" value="${autor.nacionalidad}" name="nacionalidad" placeholder="Ingresa la nacionalidad del autor"> <span class="input-group-addon"><span sclass="glyphicon glyphicon-asterisk"></span></span>
+							<input type="text" class="form-control" id="contacto" value="${autor.nacionalidad}" name="nacionalidad" placeholder="Ingresa la nacionalidad del autor"> <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
 						</div>
 					</div>
 
@@ -59,8 +59,5 @@
 			</div>
 		</div>
 	</div>
-</body>
-</html>
-</div>
 </body>
 </html>

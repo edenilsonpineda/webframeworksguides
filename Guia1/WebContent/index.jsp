@@ -1,10 +1,11 @@
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
     <head>
+    	<meta charset="ISO-8859-1">
         <title>Inicio</title>
-        <jsp:include page="/cabecera.jsp"/>
+        <%@ include file='/cabecera.jsp' %>
     </head>
     <body>
         <jsp:include page="/menu.jsp"/>
@@ -26,13 +27,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="${pageContext.request.contextPath}/libros.do?op=listar">
-                                <div class="panel-footer">
+                            <div class="panel-footer">
+                                <a href="${contextPath}/libros.do?op=listar">
                                     <span class="pull-left">Ver libros</span>
                                     <span class="pull-right"><i class="glyphicon glyphicon-arrow-right"></i></span>
                                     <div class="clearfix"></div>
-                                </div>
-                            </a>
+                                    </a>
+                            </div>       
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -48,7 +49,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="${pageContext.request.contextPath}/autores.do?op=listar">
+                            <a href="${contextPath}/autores.do?op=listar">
                                 <div class="panel-footer">
                                     <span class="pull-left">Ver autores</span>
                                     <span class="pull-right"><i class="glyphicon glyphicon-arrow-right"></i></span>
@@ -69,14 +70,15 @@
                                         <div><h4>Editoriales</h4></div>
                                     </div>
                                 </div>
-                            </div>
-                            <a href="${pageContext.request.contextPath}/editoriales.do?op=listar">
-                                <div class="panel-footer">
+                            </div>                         
+                            <div class="panel-footer">
+                                <a href="${contextPath}/editoriales.do?op=listar">
                                     <span class="pull-left">Ver editoriales</span>
                                     <span class="pull-right"><i class="glyphicon glyphicon-arrow-right"></i></span>
                                     <div class="clearfix"></div>
-                                </div>
-                            </a>
+                                    </a>
+                            </div>
+                         
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -92,13 +94,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="${pageContext.request.contextPath}/generos.do?op=listar">
-                                <div class="panel-footer">
+                            
+                            <div class="panel-footer">
+                                <a href="${contextPath}/generos.do?op=listar">
                                     <span class="pull-left">Ver generos</span>
                                     <span class="pull-right"><i class="glyphicon glyphicon-arrow-right"></i></span>
                                     <div class="clearfix"></div>
-                                </div>
-                            </a>
+                                    </a>
+                             </div>
+                            
                         </div>
                     </div>
                     
