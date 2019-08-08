@@ -28,7 +28,7 @@ import sv.edu.udb.www.utils.Validaciones;
 public class AutoresController extends HttpServlet {
 
 	private static final long serialVersionUID = 2947025922373719989L;
-	
+
 	ArrayList<String> listaErrores = new ArrayList<String>();
 	AutoresModel modelo = new AutoresModel();
 
@@ -43,26 +43,29 @@ public class AutoresController extends HttpServlet {
 			String operacion = request.getParameter("op");
 
 			switch (operacion) {
-			case "listar":
-				listar(request, response);
-				break;
-			case "nuevo":
-				request.getRequestDispatcher("/autores/nuevoAutor.jsp").forward(request, response);
-				break;
-			case "insertar":
-				insertar(request, response);
-				break;
-			case "obtener":
-				obtener(request, response);
-				break;
-			case "modificar":
-				modificar(request, response);
-				break;
-			case "eliminar":
-				eliminar(request, response);
-				break;
+				case "listar":
+					listar(request, response);
+					break;
+				case "nuevo":
+					request.getRequestDispatcher("/autores/nuevoAutor.jsp").forward(request, response);
+					break;
+				case "insertar":
+					insertar(request, response);
+					break;
+				case "obtener":
+					obtener(request, response);
+					break;
+				case "modificar":
+					modificar(request, response);
+					break;
+				case "eliminar":
+					eliminar(request, response);
+					break;
 			}
+		}catch(Exception ex) {
+			System.out.println(ex.getStackTrace());
 		}
+
 	}
 
 	// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the
