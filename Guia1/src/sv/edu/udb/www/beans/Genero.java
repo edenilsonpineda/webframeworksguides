@@ -10,6 +10,10 @@ public class Genero {
 		this.nombreGenero = "";
 		this.descripcion = "";
 	}
+	
+	public Genero(String nombreGenero) {
+		this.nombreGenero = nombreGenero;
+	}
 
 	public int getIdGenero() {
 		return idGenero;
