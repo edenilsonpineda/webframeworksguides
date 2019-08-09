@@ -9,7 +9,7 @@ import sv.edu.udb.www.beans.Editorial;
 
 public class EditorialesModel extends Conexion {
 	
-	public List<Editorial> listaEditoriales() throws SQLException{
+	public List<Editorial> listarEditoriales() throws SQLException{
 		try {
 			List<Editorial> lista = new ArrayList<Editorial>();
 			String sql = "SELECT * FROM editoriales ORDER BY nombre_editorial";
