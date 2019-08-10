@@ -5,13 +5,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import sv.edu.udb.www.beans.Genero;
 import sv.edu.udb.www.model.GenerosModel;
 import sv.edu.udb.www.utils.Validaciones;
@@ -169,7 +167,7 @@ public class GenerosController extends HttpServlet {
 					request.getSession().setAttribute("exito", "genero modificado exitosamente");
 					response.sendRedirect(request.getContextPath() + "/generos.do?op=listar");
 				} else {
-					request.getSession().setAttribute("fracaso","El genero no ha sido modificado ya hay un autor con este codigo");
+					request.getSession().setAttribute("fracaso","El genero no ha sido modificado ya hay un genero con este codigo");
 					response.sendRedirect(request.getContextPath() + "/generos.do?op=listar");
 				}
 			}

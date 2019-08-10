@@ -4,7 +4,7 @@ public class Editorial {
 	private String codigoEditorial;
 	private String nombreEditorial;
 	private String contacto;
-
+	private String telefono;
 	
 	public Editorial(){
 		this.codigoEditorial = "";
@@ -54,6 +54,4 @@ public class Editorial {
 		this.contacto = contacto;
 		this.telefono = telefono;
 	}
-
-	private String telefono;
 }
