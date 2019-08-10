@@ -60,8 +60,7 @@
 		<c:set var="fracaso" value="" scope="session" />
 		</c:if>
 		function eliminar(id) {
-			alertify.confirm("¿Realmente decea eliminar este Autor?", function(
-					e) {
+			alertify.confirm("¿Realmente decea eliminar este Autor?", function(e) {
 				if (e) {
 					location.href = "autores.do?op=eliminar&id=" + id;
 				}

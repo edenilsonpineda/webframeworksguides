@@ -73,8 +73,7 @@
 		</c:if>
 		
 		function eliminar(id) {
-			alertify.confirm("¿Realmente decea eliminar este Libro?", function(
-					e) {
+			alertify.confirm("¿Realmente decea eliminar este Libro?", function(e) {
 				if (e) {
 					location.href = "libros.do?op=eliminar&id=" + id;
 				}

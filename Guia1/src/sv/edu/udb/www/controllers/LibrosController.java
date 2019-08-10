@@ -12,20 +12,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.json.simple.JSONObject;
-import sv.edu.udb.www.beans.Editorial;
 import sv.edu.udb.www.beans.Libro;
 import sv.edu.udb.www.model.AutoresModel;
 import sv.edu.udb.www.model.EditorialesModel;
 import sv.edu.udb.www.model.GenerosModel;
 import sv.edu.udb.www.model.LibrosModel;
 import sv.edu.udb.www.utils.Validaciones;
-
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author S. Mártir
