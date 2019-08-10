@@ -51,6 +51,25 @@
                 <li><a href="${contextPath}/editoriales.do?op=listar">Ver lista de editoriales</a></li>
               </ul>
             </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
+                 role="button" aria-haspopup="true" 
+                 aria-expanded="false">Docentes<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li><a href="${contextPath}/docentes.do?op=nuevo">Registrar docente</a></li>
+                <li><a href="${contextPath}/docentes.do?op=listar">Ver lista de docentes</a></li>
+              </ul>
+            </li>
+            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
+                 role="button" aria-haspopup="true" 
+                 aria-expanded="false">Prestamos<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li><a href="${contextPath}/prestamos.do?op=nuevo">Registrar prestamo</a></li>
+                <li><a href="${contextPath}/prestamos.do?op=listar">Ver lista de prestamos</a></li>
+              </ul>
+            </li>
           </ul>
           
         </div>

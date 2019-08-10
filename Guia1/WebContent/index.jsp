@@ -57,6 +57,8 @@
                             </a>
                         </div>
                     </div>
+                    
+                    
                     <div class="col-lg-3 col-md-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
@@ -80,6 +82,8 @@
                          
                         </div>
                     </div>
+                    
+                    
                     <div class="col-lg-3 col-md-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
@@ -97,6 +101,57 @@
                             <div class="panel-footer">
                                 <a href="${contextPath}/generos.do?op=listar">
                                     <span class="pull-left">Ver generos</span>
+                                    <span class="pull-right"><i class="glyphicon glyphicon-arrow-right"></i></span>
+                                    <div class="clearfix"></div>
+                                    </a>
+                             </div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="glyphicon glyphicon-user huge"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">${requestScope.totaldo}</div>
+                                        <div><h4>Docentes</h4></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="${contextPath}/docentes.do?op=listar">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Ver docentes</span>
+                                    <span class="pull-right"><i class="glyphicon glyphicon-arrow-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="glyphicon glyphicon-folder-open huge"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">${requestScope.totalgen}</div>
+                                        <div><h4>Prestamos</h4></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel-footer">
+                                <a href="${contextPath}/prestamos.do?op=listar">
+                                    <span class="pull-left">Ver prestamos</span>
                                     <span class="pull-right"><i class="glyphicon glyphicon-arrow-right"></i></span>
                                     <div class="clearfix"></div>
                                     </a>

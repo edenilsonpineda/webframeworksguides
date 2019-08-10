@@ -260,9 +260,6 @@ public class LibrosController extends HttpServlet {
 			 request.setAttribute( "listaEditoriales", editorial.listarEditoriales());
 			 request.setAttribute("listaAutores", autor.listarAutores());
 			 request.setAttribute("listaGeneros", genero.listarGeneros());
-			 System.out.println("\n\n");
- 			System.out.println("Se esta quedando aqui");
- 			System.out.println("\n\n");
 			 request.getRequestDispatcher("/libros/nuevoLibro.jsp").forward(request, response);
 		 } catch (SQLException | ServletException | IOException ex) {
 			 Logger.getLogger(LibrosController.class.getName()).log(Level.SEVERE, null, ex);
