@@ -18,11 +18,7 @@
   --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="org.apache.axis2.Constants,
-                 org.apache.axis2.description.AxisService,
-                 java.util.Collection,
-                 java.util.HashMap,
-                 java.util.Iterator"%>
+<%@ page import="org.apache.axis2.Constants,org.apache.axis2.description.AxisService,java.util.Collection,java.util.HashMap,java.util.Iterator"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="/WEB-INF/include/adminheader.jsp"/>
 <h1>Turn On Service</h1>
