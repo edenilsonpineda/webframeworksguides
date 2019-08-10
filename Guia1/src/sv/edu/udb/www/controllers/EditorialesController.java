@@ -5,28 +5,22 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import sv.edu.udb.www.model.EditorialesModel;
 import sv.edu.udb.www.beans.Editorial;
+import sv.edu.udb.www.model.EditorialesModel;
 import sv.edu.udb.www.utils.Validaciones;
 
-/**
- * Servlet implementation class EditorialesController
- */
-@WebServlet(name = "/EditorialesController", urlPatterns = {"editoriales.do"})
+
+@WebServlet(name = "/EditorialesController", urlPatterns = {"/editoriales.do"})
 public class EditorialesController extends HttpServlet {
+	
+	
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-	
 	ArrayList<String> listaErrores = new ArrayList<String>();
 	EditorialesModel modelo = new EditorialesModel();
 	

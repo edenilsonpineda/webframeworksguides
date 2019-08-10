@@ -86,7 +86,7 @@ public class EditorialesModel extends Conexion {
 	public int modificarEditorial(Editorial editorial) throws SQLException{
 		try {
 			int filasAfectadas = 0;
-			String sql = "UPDATE editoriales SET nombre_editorial = ?, contacto = ?, telefono = ?. codigo_editorial = ?";
+			String sql = "UPDATE editoriales SET nombre_editorial = ?, contacto = ?, telefono = ? WHERE codigo_editorial = ?";
 			this.conectar();
 			st = conexion.prepareStatement(sql);
 			st.setString(1, editorial.getNombreEditorial());

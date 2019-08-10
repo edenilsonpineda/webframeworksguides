@@ -42,7 +42,7 @@
  						<label for="nombre">Nombre del editorial</label>
  						<div class="input-group">
  							<input type="text" class="form-control" name="nombre" id="nombre" value="${editorial.nombreEditorial}" placeholder="Ingresa el nombre del genero" >
- 							<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+							<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
  						</div>
  					</div>
  					
@@ -62,7 +62,7 @@
  						</div>
  					</div>
 
- 					<input type="submit" class="btn btn-info" value="Guardar" name="Guardar">
+ 					<input type="submit" class="btn btn-info"value="Guardar" name="Guardar">
  					<a class="btn btn-danger" href="${contextPath}/editoriales.do?op=listar">Cancelar</a>
  				</form>
  			</div>
