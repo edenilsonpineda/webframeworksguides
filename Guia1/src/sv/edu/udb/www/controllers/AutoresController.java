@@ -40,6 +40,7 @@ public class AutoresController extends HttpServlet {
 				listar(request, response);
 				return;
 			}
+			
 			String operacion = request.getParameter("op");
 
 			switch (operacion) {
@@ -124,17 +125,21 @@ public class AutoresController extends HttpServlet {
 			miAutor.setCodigoAutor(request.getParameter("codigo"));
 			miAutor.setNombreAutor(request.getParameter("nombre"));
 			miAutor.setNacionalidad(request.getParameter("nacionalidad"));
+			
 			if (Validaciones.isEmpty(miAutor.getCodigoAutor())) {
 				listaErrores.add("El codigo del autor es obligatorio");
 			} else if (!Validaciones.esCodigoAutor(miAutor.getCodigoAutor())) {
 				listaErrores.add("El codigo de la autor debe tener el formato correcto AUT000");
 			}
+			
 			if (Validaciones.isEmpty(miAutor.getNombreAutor())) {
 				listaErrores.add("El nombre del autor es obligatorio");
 			}
+			
 			if (Validaciones.isEmpty(miAutor.getNacionalidad())) {
 				listaErrores.add("La nacionalidad es obligatoria");
 			}
+			
 			if (listaErrores.size() > 0) {
 				request.setAttribute("listaErrores", listaErrores);
 				request.setAttribute("autor", miAutor);
@@ -144,8 +149,7 @@ public class AutoresController extends HttpServlet {
 					request.getSession().setAttribute("exito", "autor registrado exitosamente");
 					response.sendRedirect(request.getContextPath() + "/autores.do?op=listar");
 				} else {
-					request.getSession().setAttribute("fracaso",
-							"El autor no ha sido ingresado" + "ya hay un autor con este codigo");
+					request.getSession().setAttribute("fracaso","El autor no ha sido ingresado" + "ya hay un autor con este codigo");
 					response.sendRedirect(request.getContextPath() + "/autores.do?op=listar");
 				}
 			}

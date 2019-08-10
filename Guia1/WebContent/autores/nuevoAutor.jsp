@@ -34,11 +34,10 @@
 
 						<label for="codigo">Codigo del autor</label>
 						<div class="input-group">
-							<input type="text" class="form-control" name="codigo" id="codigo"
-								value="${autor.codigoAutor}"
-								placeholder="Ingresa el codigo del autor"> <span
-								class="input-group-addon"><span
-								class="glyphicon glyphicon-asterisk"></span></span>
+							<input type="text" class="form-control" name="codigo" id="codigo" value="${autor.codigoAutor}" placeholder="Ingresa el codigo del autor"> 
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-asterisk"></span>
+							</span>
 						</div>
 					</div>
 					<div class="form-group">

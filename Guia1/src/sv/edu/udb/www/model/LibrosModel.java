@@ -21,10 +21,11 @@ public class LibrosModel extends Conexion {
 			rs = cs.executeQuery();
 			while(rs.next()) {
 				Libro libro = new Libro();
-				libro.setCodigoAutor(rs.getString("codigo_libro"));
+				libro.setCodigoLibro(rs.getString("codigo_libro"));
 				libro.setNombreLibro(rs.getString("nombre_libro"));
 				libro.setPrecio(rs.getDouble("precio"));
 				libro.setExistencias(rs.getInt("existencias"));
+				libro.setDescripcion(rs.getString("descripcion"));
 				libro.setAutor(new Autor(rs.getString("nombre_autor")));
 				libro.setEditorial(new Editorial(rs.getString("nombre_editorial")));
 				libro.setGenero(new Genero(rs.getString("nombre_genero")));
@@ -85,10 +86,11 @@ public class LibrosModel extends Conexion {
 	
 	public Libro obtenerLibro(String codigo) throws SQLException{
 		try {
-			String sql = "CALL sp_ontenerLibro(?)";
+			String sql = "CALL sp_obtenerLibro(?)";
 			this.conectar();
 			cs = conexion.prepareCall(sql);
 			cs.setString(1, codigo);
+			rs = cs.executeQuery();
 			if(rs.next()) {
 				Libro libro = new Libro();
 				libro.setCodigoLibro(rs.getString("codigo_libro"));
@@ -117,6 +119,7 @@ public class LibrosModel extends Conexion {
 			int filasAfectadas = 0;
 			String sql = "CALL sp_modificarLibro(?,?,?,?,?,?,?,?)";
 			this.conectar();
+			
 			cs = conexion.prepareCall(sql);
 			cs.setString(1, libro.getCodigoLibro());
 			cs.setString(2, libro.getNombreLibro());
@@ -126,6 +129,7 @@ public class LibrosModel extends Conexion {
 			cs.setString(5, libro.getCodigoEditorial());
 			cs.setInt(7, libro.getIdGenero());
 			cs.setString(8, libro.getDescripcion());
+			
 			filasAfectadas = cs.executeUpdate();
 			this.desconectar();
 			return filasAfectadas;

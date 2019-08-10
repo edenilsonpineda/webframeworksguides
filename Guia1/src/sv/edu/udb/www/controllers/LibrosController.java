@@ -161,7 +161,7 @@ public class LibrosController extends HttpServlet {
 					 response.sendRedirect(request.getContextPath() +"/libros.do?op=listar");
 				 }else{
 					 request.getSession().setAttribute("fracaso", "El libro no ha sido ingresado"+ "ya hay un libro con este codigo");
-							 response.sendRedirect(request.getContextPath() +"/libros.do?op=listar");
+					 response.sendRedirect(request.getContextPath() +"/libros.do?op=listar");
 				 }
 			 }
 		 } catch (ServletException ex) {

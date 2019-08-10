@@ -11,6 +11,7 @@ public class Libro {
 	private String codigoAutor;
 	private String codigoEditorial;
 	private int idGenero;
+	private String codigoLibro;
 
 	
 	public Libro() {
@@ -115,6 +116,6 @@ public class Libro {
 		this.idGenero = idGenero;
 	}
 
-	private String codigoLibro;
+	
 
 }
