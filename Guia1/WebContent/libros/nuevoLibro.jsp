@@ -51,7 +51,7 @@
 					<div class="form-group">
  						<label for="existencias">existencias:</label>
  						<div class="input-group">
-	 						<input type="text" class="form-control" id="existencias" value="${libro.existencias}" name="existencias" placeholder="Ingresa las existencias del libro">
+	 						<input type="text" class="form-control" id="existencias" value="${libro.existencias}" name="existencias" placeholder="Ingresa las existencias del libro" required>
 	 						<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
 	 					</div>
  					</div>
@@ -59,7 +59,7 @@
 					<div class="form-group">
  						<label for="precio">precio:</label>
  						<div class="input-group">
- 							<input type="number" step="0.1" min="0" class="form-control" id="precio" value="${libro.precio}" name="precio" placeholder="Ingresa el precio del libro" >
+ 							<input type="number" step="0.1" min="0" class="form-control" id="precio" value="${libro.precio}" name="precio" placeholder="Ingresa el precio del libro" required>
  							<span class="input-group-addon"><span class="glyphicon glyphiconasterisk"></span></span>
  						</div>
  					</div>
@@ -115,11 +115,10 @@
  			</div>
  		</div>
  	</div>
- 
+ </body>
 <script>
  	$("#codigoAutor option[value="+ '${libro.codigoAutor}' +"]").attr("selected",true);
  	$("#codigoEditorial option[value="+ '${libro.codigoEditorial}'+"]").attr("selected",true);
  	$("#codigoGenero option[value="+ '${libro.idGenero}' +"]").attr("selected",true);
 </script>
-
 </html>

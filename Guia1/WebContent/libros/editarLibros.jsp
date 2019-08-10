@@ -5,16 +5,13 @@
  <head>
  	<title>Modificar Libro</title>
  	<%@ include file='/cabecera.jsp' %>
- 	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
  </head>
  
  <body>
  	<jsp:include page="/menu.jsp"/>
- 	
  	<div class="container">
  		<div class="row">
- 			<h3>Nuevo libro</h3>
+ 			<h3>Modificar libro</h3>
  		</div>
  
  		<div class="row">
@@ -31,16 +28,15 @@
 			
 				<form role="form" action="${contextPath}/libros.do" method="POST">
 	 				<input type="hidden" name="op" value="modificar">
-	 				
 	 				<div class="well well-sm"><strong><span class="glyphicon glyphiconasterisk"></span>Campos requeridos</strong></div>
-	 					<div class="form-group">
-	
-							<label for="codigo">Codigo del libro:</label>
-	 						<div class="input-group">
-	 							<input type="text" readonly class="form-control" name="codigo" id="codigo" value="${libro.codigoLibro}" placeholder="Ingresa el codigo del libro" >
-	 							<span class="input-group-addon"><span class="glyphicon glyphiconasterisk"></span></span>
-	 						</div>
-	 					</div>
+	 					
+					<div class="form-group">
+						<label for="codigo">Codigo del libro:</label>
+						<div class="input-group">
+							<input type="text" readonly class="form-control" name="codigo" id="codigo" value="${libro.codigoLibro}" placeholder="Ingresa el codigo del libro" >
+							<span class="input-group-addon"><span class="glyphicon glyphiconasterisk"></span></span>
+						</div>
+					</div>
 					
 					<div class="form-group">
 	 					<label for="nombre">Nombre del libro:</label>
@@ -118,5 +114,4 @@
  		</div>
  	</div>
 </body>
-
 </html>

@@ -47,7 +47,7 @@ public class LibrosModel extends Conexion {
 			String sql = "CALL sp_insertarLibro(?,?,?,?,?,?,?,?)";
 			this.conectar();
 			cs = conexion.prepareCall(sql);
-			cs.setString(1, libro.getCodigoAutor());
+			cs.setString(1, libro.getCodigoLibro());
 			cs.setString(2, libro.getNombreLibro());
 			cs.setInt(3, libro.getExistencias());
 			cs.setDouble(4, libro.getPrecio());
@@ -126,7 +126,7 @@ public class LibrosModel extends Conexion {
 			cs.setInt(3, libro.getExistencias());
 			cs.setDouble(4, libro.getPrecio());
 			cs.setString(5, libro.getCodigoAutor());
-			cs.setString(5, libro.getCodigoEditorial());
+			cs.setString(6, libro.getCodigoEditorial());
 			cs.setInt(7, libro.getIdGenero());
 			cs.setString(8, libro.getDescripcion());
 			

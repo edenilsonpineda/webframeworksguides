@@ -144,8 +144,8 @@ public class LibrosController extends HttpServlet {
 
 
 			 if(listaErrores.size() >0){
-				 request.setAttribute("libro", miLibro);
 				 request.setAttribute("listaErrores", listaErrores);
+				 request.setAttribute("libro", miLibro);
 				 request.getRequestDispatcher("libros.do?op=nuevo").forward(request, response);
 			 }else{
 				 if(modelo.insertarLibro(miLibro)>0){
@@ -187,58 +187,57 @@ public class LibrosController extends HttpServlet {
 	
 	private void modificar(HttpServletRequest request, HttpServletResponse response) {
 		 try{
-			 listaErrores.clear();
-			 Libro miLibro = new Libro();
-			 miLibro.setCodigoLibro(request.getParameter("codigo"));
-			 miLibro.setNombreLibro(request.getParameter("nombre"));
-			 miLibro.setExistencias(Integer.parseInt(request.getParameter("existencias")));
-			 miLibro.setPrecio(Double.parseDouble(request.getParameter("precio")));
-			 miLibro.setCodigoAutor(request.getParameter("codigoAutor"));
-			 miLibro.setCodigoEditorial(request.getParameter("codigoEditorial"));
-			 miLibro.setIdGenero(Integer.parseInt(request.getParameter("idGenero")));
-			 miLibro.setDescripcion(request.getParameter("descripcion"));
+		 listaErrores.clear();
+		 Libro miLibro = new Libro();
+		 miLibro.setCodigoLibro(request.getParameter("codigo"));
+		 miLibro.setNombreLibro(request.getParameter("nombre"));
+		 miLibro.setExistencias(Integer.parseInt(request.getParameter("existencias")));
+		 miLibro.setPrecio(Double.parseDouble(request.getParameter("precio")));
+		 miLibro.setCodigoAutor(request.getParameter("codigoAutor"));
+		 miLibro.setCodigoEditorial(request.getParameter("codigoEditorial"));
+		 miLibro.setIdGenero(Integer.parseInt(request.getParameter("idGenero")));
+		 miLibro.setDescripcion(request.getParameter("descripcion"));
 
-			 if(Validaciones.isEmpty(miLibro.getCodigoLibro())){
-				 listaErrores.add("El codigo del libro es obligatorio");
-			 }else if(!Validaciones.esCodigoLibro(miLibro.getCodigoLibro())){
-				 listaErrores.add("El codigo del libro debe tener el formato correcto LIB000");
-			 }
-			 
-			 if(Validaciones.isEmpty(miLibro.getNombreLibro())){
-				 listaErrores.add("El nombre del libro es obligatorio");
-			 }
-			 
-			 if(!Validaciones.esEnteroPositivo(request.getParameter("existencias"))){
-				 listaErrores.add("existencias deben ser enteros positivos");
-			 }
-			 
-			 if(!Validaciones.esDecimalPositivo(request.getParameter("precio"))){
-				 listaErrores.add("El precio deber ser un numero mayor o igual a 0");
-			 }
-
-
-			 if(listaErrores.size() >0){
-				 request.setAttribute("libro", miLibro);
-				 request.setAttribute("listaErrores", listaErrores);
-				 request.getRequestDispatcher("libros.do?op=obtener").forward(request, response);
-			 }else{
-				 if(modelo.modificarLibro(miLibro)>0){
-					 request.getSession().setAttribute("exito", "libro modificado exitosamente");
-					 response.sendRedirect(request.getContextPath() +"/libros.do?op=listar");
-				 }else{
-					 request.getSession().setAttribute("fracaso", "El libro no ha sido modificado"+ "ya hay un libro con este codigo");
-					 response.sendRedirect(request.getContextPath() +"/libros.do?op=listar");
-				 }
-			 }
-		 } catch (ServletException ex) {
-			 Logger.getLogger(LibrosController.class.getName()).log(Level.SEVERE, null, ex);
-		 } catch (IOException ex) {
-			 Logger.getLogger(LibrosController.class.getName()).log(Level.SEVERE, null, ex);
-		 } catch (SQLException ex) {
-			 Logger.getLogger(LibrosController.class.getName()).log(Level.SEVERE, null, ex);
+		 if(Validaciones.isEmpty(miLibro.getCodigoLibro())){
+			 listaErrores.add("El codigo del libro es obligatorio");
+		 }else if(!Validaciones.esCodigoLibro(miLibro.getCodigoLibro())){
+			 listaErrores.add("El codigo del libro debe tener el formato correcto LIB000");
+		 }
+		 
+		 if(Validaciones.isEmpty(miLibro.getNombreLibro())){
+			 listaErrores.add("El nombre del libro es obligatorio");
+		 }
+		 
+		 if(!Validaciones.esEnteroPositivo(request.getParameter("existencias"))){
+			 listaErrores.add("existencias deben ser enteros positivos");
+		 }
+		 
+		 if(!Validaciones.esDecimalPositivo(request.getParameter("precio"))){
+			 listaErrores.add("El precio deber ser un numero mayor o igual a 0");
 		 }
 
+		 if(listaErrores.size() >0){
+			 request.setAttribute("libro", miLibro);
+			 request.setAttribute("listaErrores", listaErrores);
+			 request.getRequestDispatcher("libros.do?op=obtener").forward(request, response);
+		 }else{
+			 if(modelo.modificarLibro(miLibro)>0){
+				 request.getSession().setAttribute("exito", "libro modificado exitosamente");
+				 response.sendRedirect(request.getContextPath() +"/libros.do?op=listar");
+			 }else{
+				 request.getSession().setAttribute("fracaso", "El libro no ha sido modificado"+ "ya hay un libro con este codigo");
+				 response.sendRedirect(request.getContextPath() +"/libros.do?op=listar");
+			 }
+		 }
+	} catch (ServletException ex) {
+		 Logger.getLogger(LibrosController.class.getName()).log(Level.SEVERE, null, ex);
+	} catch (IOException ex) {
+		 Logger.getLogger(LibrosController.class.getName()).log(Level.SEVERE, null, ex);
+	} catch (SQLException ex) {
+		 Logger.getLogger(LibrosController.class.getName()).log(Level.SEVERE, null, ex);
 	}
+
+ }
 	
 	
 	private void eliminar(HttpServletRequest request, HttpServletResponse response) {
@@ -261,6 +260,9 @@ public class LibrosController extends HttpServlet {
 			 request.setAttribute( "listaEditoriales", editorial.listarEditoriales());
 			 request.setAttribute("listaAutores", autor.listarAutores());
 			 request.setAttribute("listaGeneros", genero.listarGeneros());
+			 System.out.println("\n\n");
+ 			System.out.println("Se esta quedando aqui");
+ 			System.out.println("\n\n");
 			 request.getRequestDispatcher("/libros/nuevoLibro.jsp").forward(request, response);
 		 } catch (SQLException | ServletException | IOException ex) {
 			 Logger.getLogger(LibrosController.class.getName()).log(Level.SEVERE, null, ex);
