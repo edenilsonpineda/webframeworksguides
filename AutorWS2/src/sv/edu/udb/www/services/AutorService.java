@@ -1,7 +1,6 @@
 package sv.edu.udb.www.services;
 
 import java.util.List;
-
 import sv.edu.udb.www.beans.Autor;
 
 //Interfaz 
